@@ -2,7 +2,6 @@
 *.pyc
 .media/
 work/
-static
 .vscode
 .env
 # Created by https://www.toptal.com/developers/gitignore/api/django

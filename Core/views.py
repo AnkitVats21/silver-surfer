@@ -113,8 +113,13 @@ class RegistrationView(FormView):
     success_url = reverse_lazy('home')
 
     form_class = RegistrationForm
+    
+    event = None
 
-    event = Event.objects.filter(active=True).first()
+    try:
+        event = Event.objects.filter(active=True).first()
+    except:
+        pass
 
     def post(self, request, *args, **kwargs):
         alert = ''
